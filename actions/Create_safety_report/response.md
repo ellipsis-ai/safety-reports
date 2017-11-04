@@ -1,0 +1,1 @@
+A new safety report has been created at: {successResult}.

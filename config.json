@@ -1,0 +1,8 @@
+{
+  "name" : "Safety Reports",
+  "exportId" : "xR8gM4_mSnmRr7t5qESsYw",
+  "icon" : "⚠️",
+  "requiredAWSConfigs" : [ ],
+  "requiredOAuth2ApiConfigs" : [ ],
+  "requiredSimpleTokenApis" : [ ]
+}

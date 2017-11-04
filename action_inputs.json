@@ -1,0 +1,31 @@
+[ {
+  "exportId" : "HzcqfhGISQmq2KkN88K3_Q",
+  "name" : "file",
+  "paramType" : {
+    "exportId" : "File",
+    "name" : "File"
+  },
+  "question" : "Paste an image or upload a file that shows the problem",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
+  "exportId" : "PQhnN2K9Q2G_xfR7Gch06Q",
+  "name" : "details",
+  "paramType" : {
+    "exportId" : "Text",
+    "name" : "Text"
+  },
+  "question" : "Add additional details, if any, or type \"none\"",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
+  "exportId" : "Z0lCjwjITSmrRtRGJCa5kw",
+  "name" : "title",
+  "paramType" : {
+    "exportId" : "Text",
+    "name" : "Text"
+  },
+  "question" : "Briefly describe the safety issue",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+} ]
