@@ -1,12 +1,5 @@
 function(title, details, file, ellipsis) {
-  file.fetch = require("fetch_function_for_file_param")(file, ellipsis);const request = require('request');
-
-uploadFile().then(ref => {
-  createTask(ref).then(taskId => {
-    const taskUrl = `${teamworkApiBaseUrl}/#tasks/${taskId}`
-    ellipsis.success(taskUrl);
-  });
-});
+  const request = require('request');
 
 const token = ellipsis.env.TEAMWORK_API_TOKEN;
 const taskListId = ellipsis.env.TEAMWORK_SAFETY_REPORT_TASK_LIST_ID;
@@ -15,6 +8,13 @@ const credentials = "Basic " + new Buffer(`${token}:x`).toString('base64');
 const teamworkApiBaseUrl = `https://${subdomain}.teamwork.com/`;
 const slackUsername = ellipsis.userInfo.messageInfo.details.name;
 const slackRealname = ellipsis.userInfo.messageInfo.details.profile.realName;
+
+uploadFile().then(ref => {
+  createTask(ref).then(taskId => {
+    const taskUrl = `${teamworkApiBaseUrl}/#tasks/${taskId}`
+    ellipsis.success(taskUrl);
+  });
+});
 
 function teamworkApiUrlFor(path) {
   return `${teamworkApiBaseUrl}/${path}`; 
