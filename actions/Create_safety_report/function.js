@@ -1,18 +1,27 @@
-function(title, details, file, ellipsis) {
+function(title, hazardType, location, file, details, ellipsis) {
   const request = require('request');
 
 const token = ellipsis.env.TEAMWORK_API_TOKEN;
 const taskListId = ellipsis.env.TEAMWORK_SAFETY_REPORT_TASK_LIST_ID;
 const subdomain = ellipsis.env.TEAMWORK_SUBDOMAIN;
+const followUpUserId = ellipsis.env.SAFETY_REPORT_FOLLOW_UP_USER_ID;
 const credentials = "Basic " + new Buffer(`${token}:x`).toString('base64');
-const teamworkApiBaseUrl = `https://${subdomain}.teamwork.com/`;
+const teamworkApiBaseUrl = `https://${subdomain}.teamwork.com`;
 const slackUsername = ellipsis.userInfo.messageInfo.details.name;
 const slackRealname = ellipsis.userInfo.messageInfo.details.profile.realName;
+let filename = null;
 
 uploadFile().then(ref => {
   createTask(ref).then(taskId => {
     const taskUrl = `${teamworkApiBaseUrl}/#tasks/${taskId}`
-    ellipsis.success(taskUrl);
+    ellipsis.success({
+      taskUrl: taskUrl,
+      teamworkUrl: teamworkApiBaseUrl,
+      hazardType: hazardType.label,
+      location: location.label,
+      filename: filename || "no image file included",
+      followUpUserId: followUpUserId
+    });
   });
 });
 
@@ -24,6 +33,7 @@ function uploadFile() {
   return new Promise((resolve, reject) => {
     if (file) {
       file.fetch().then(res => {
+        filename = res.filename;
         const formData = {
           file: {
             value: res.value,
@@ -52,11 +62,14 @@ function uploadFile() {
 }
 
 function description() {
-  const submittedText = `Submitted by: ${slackRealname} (@${slackUsername})`
+  const submittedText =  `**Submitted by:**\t${slackRealname} (@${slackUsername})`;
+  const hazardTypeText = `**Hazard type:**\t${hazardType.label}`;
+  const locationText = `**Location:**\t${location.label}`;
+  const standardText = `${submittedText}\n\n${hazardTypeText}\n\n${locationText}`;
   if (details.trim().toLowerCase() === "none") {
-    return submittedText;
+    return standardText;
   } else {
-    return `${details}\n\n${submittedText}`;
+    return `${details}\n\n${standardText}`;
   }
 }
 
