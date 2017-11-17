@@ -1,6 +1,7 @@
 # A new safety report has been created with the following information:
 
 **Title:** {title}
+**Still unsafe?:** {successResult.stillUnsafe}
 **Hazard type:** {successResult.hazardType}
 **Location:** {successResult.location}
 **Image file:** {successResult.filename}

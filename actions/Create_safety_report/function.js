@@ -1,4 +1,4 @@
-function(title, hazardType, location, file, details, ellipsis) {
+function(title, stillUnsafe, hazardType, location, file, details, ellipsis) {
   const request = require('request');
 
 const token = ellipsis.env.TEAMWORK_API_TOKEN;
@@ -15,6 +15,7 @@ uploadFile().then(ref => {
   createTask(ref).then(taskId => {
     const taskUrl = `${teamworkApiBaseUrl}/#tasks/${taskId}`
     ellipsis.success({
+      stillUnsafe: stillUnsafe ? "Yes" : "No",
       taskUrl: taskUrl,
       teamworkUrl: teamworkApiBaseUrl,
       hazardType: hazardType.label,
