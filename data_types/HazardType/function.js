@@ -14,14 +14,14 @@ Grow light hazard
 Electrical panel hazard
 Ergonomic (lifting) hazard
 Fire hazard
-Compressed Gas hazard
+Compressed gas hazard
 Chemical hazard
 Lack of warning signs
-No Lock Out on Electrical, Tanks, Compressed Gas
+No lock out on electrical, tanks, compressed gas
 Fall hazard
 Sharp object hazard in work area
 Evacuation path blocked
-Emergency Equipment out of place
+Emergency equipment out of place
 Other
 `));
 }

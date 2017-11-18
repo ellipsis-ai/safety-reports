@@ -2,24 +2,23 @@ function(ellipsis) {
   const itemsForText = require('data_type_items_for_text');
 
 ellipsis.success(itemsForText(`
-Default Locations for SSF
 Condor 1
 Condor 2
-Condor Packaging
-Mkt Test Room
-MAP - Farm Ops Room
+Condor packaging
+Mkt test room
+MAP - Farm ops room
 MAP - Hallway
-MAP - Tank Room
-MAP - Cold Storage
-Propagation Room
-Seeder Area
-R&D Area
-Open Warehouse
-Old Tralier
-New Trailer
-New Office 1st floor
-New Office 2nd floor
+MAP - Tank room
+MAP - Cold storage
+Propagation room
+Seeder area
+R&D area
+Open warehouse
+Old trailer
+New trailer
+New office 1st floor
+New office 2nd floor
 Truck dock
-Outside Trailer area
+Outside trailer area
 `));
 }
