@@ -1,4 +1,4 @@
-function(title, stillUnsafe, hazardType, location, file, details, ellipsis) {
+function(hazardType, briefDescription, location, stillUnsafe, concernLevel, file, details, ellipsis) {
   const request = require('request');
 
 const token = ellipsis.env.TEAMWORK_API_TOKEN;
@@ -16,6 +16,7 @@ uploadFile().then(ref => {
     const taskUrl = `${teamworkApiBaseUrl}/#tasks/${taskId}`
     ellipsis.success({
       stillUnsafe: stillUnsafe ? "Yes" : "No",
+      concernLevel: concernLevel.label,
       taskUrl: taskUrl,
       teamworkUrl: teamworkApiBaseUrl,
       hazardType: hazardType.label,
@@ -62,23 +63,31 @@ function uploadFile() {
   });
 }
 
+function taskTitle() {
+  return `${hazardType.label}: ${briefDescription}`;
+}
+
+function additionalDetailsText() {
+  if (details.trim().toLowerCase() === "none") {
+    return "";
+  } else {
+    return `**Additional details:**\t${details}`;
+  }
+}
+
 function description() {
   const submittedText =  `**Submitted by:**\t${slackRealname} (@${slackUsername})`;
-  const hazardTypeText = `**Hazard type:**\t${hazardType.label}`;
   const locationText = `**Location:**\t${location.label}`;
-  const standardText = `${submittedText}\n\n${hazardTypeText}\n\n${locationText}`;
-  if (details.trim().toLowerCase() === "none") {
-    return standardText;
-  } else {
-    return `${details}\n\n${standardText}`;
-  }
+  const stillUnsafeText = `**Still unsafe?:**\t${stillUnsafe ? "Yes" : "No"}`;
+  const concernLevelText = `**Level of concern:**\t${concernLevel.label}`;
+  return `${submittedText}\n\n${locationText}\n\n${stillUnsafeText}\n\n${concernLevelText}\n\n${additionalDetailsText()}`
 }
 
 function createTask(pendingFileRef) {
   return new Promise((resolve, reject) => {
     const body = {
       "todo-item": {
-        content: title,
+        content: taskTitle(),
         description: description(),
         pendingFileAttachments: pendingFileRef
       }

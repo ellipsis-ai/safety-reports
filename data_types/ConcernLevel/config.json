@@ -1,0 +1,10 @@
+{
+  "exportId" : "w6FA6MKdTXumxpQXOeUa4w",
+  "name" : "ConcernLevel",
+  "forcePrivateResponse" : false,
+  "isDataType" : true,
+  "dataTypeConfig" : {
+    "fields" : [ ],
+    "usesCode" : true
+  }
+}

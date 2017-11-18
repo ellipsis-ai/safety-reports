@@ -1,9 +1,10 @@
 # A new safety report has been created with the following information:
 
-**Title:** {title}
-**Still unsafe?:** {successResult.stillUnsafe}
 **Hazard type:** {successResult.hazardType}
+**Brief description:** {briefDescription}
 **Location:** {successResult.location}
+**Still unsafe?:** {successResult.stillUnsafe}
+**Level of concern:** {successResult.concernLevel}
 **Image file:** {successResult.filename}
 **Additional details:** {details}
 

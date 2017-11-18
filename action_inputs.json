@@ -9,6 +9,16 @@
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
+  "exportId" : "CDORsWs6RiKnDUM2B070BQ",
+  "name" : "concernLevel",
+  "paramType" : {
+    "exportId" : "w6FA6MKdTXumxpQXOeUa4w",
+    "name" : "ConcernLevel"
+  },
+  "question" : "How concerned are you about the issue?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
   "exportId" : "HzcqfhGISQmq2KkN88K3_Q",
   "name" : "file",
   "paramType" : {
@@ -40,12 +50,12 @@
   "isSavedForUser" : false
 }, {
   "exportId" : "Z0lCjwjITSmrRtRGJCa5kw",
-  "name" : "title",
+  "name" : "briefDescription",
   "paramType" : {
     "exportId" : "Text",
     "name" : "Text"
   },
-  "question" : "Briefly describe the safety issue",
+  "question" : "Briefly describe the issue",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
