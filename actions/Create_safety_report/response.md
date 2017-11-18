@@ -1,1 +1,13 @@
-A new safety report has been created at: {successResult}.
+# A new safety report has been created with the following information:
+
+**Hazard type:** {successResult.hazardType}
+**Brief description:** {briefDescription}
+**Location:** {successResult.location}
+**Still unsafe?:** {successResult.stillUnsafe}
+**Level of concern:** {successResult.concernLevel}
+**Image file:** {successResult.filename}
+**Additional details:** {details}
+
+If you have a {successResult.teamworkUrl} login, you can view the report at: {successResult.taskUrl}
+
+You can follow up on this by contacting <@{successResult.followUpUserId}>

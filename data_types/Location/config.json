@@ -1,0 +1,10 @@
+{
+  "exportId" : "un1P2zxETp2Gi6p6DxbD0A",
+  "name" : "Location",
+  "forcePrivateResponse" : false,
+  "isDataType" : true,
+  "dataTypeConfig" : {
+    "fields" : [ ],
+    "usesCode" : true
+  }
+}

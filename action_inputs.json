@@ -1,4 +1,24 @@
 [ {
+  "exportId" : "5dRZu7QDQxOQbK62xOWlfQ",
+  "name" : "stillUnsafe",
+  "paramType" : {
+    "exportId" : "Yes/No",
+    "name" : "Yes/No"
+  },
+  "question" : "Is the situation still unsafe?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
+  "exportId" : "CDORsWs6RiKnDUM2B070BQ",
+  "name" : "concernLevel",
+  "paramType" : {
+    "exportId" : "w6FA6MKdTXumxpQXOeUa4w",
+    "name" : "ConcernLevel"
+  },
+  "question" : "How concerned are you about the issue?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
   "exportId" : "HzcqfhGISQmq2KkN88K3_Q",
   "name" : "file",
   "paramType" : {
@@ -15,17 +35,37 @@
     "exportId" : "Text",
     "name" : "Text"
   },
-  "question" : "Add additional details, if any, or type \"none\"",
+  "question" : "Add any additional details you'd like to include, or type \"none\"",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
+  "exportId" : "SuweJeGPSgS7bkXhIrD4-w",
+  "name" : "hazardType",
+  "paramType" : {
+    "exportId" : "42CuJUqkQhC1xaTNDffe6w",
+    "name" : "HazardType"
+  },
+  "question" : "What type of hazard is it?",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
   "exportId" : "Z0lCjwjITSmrRtRGJCa5kw",
-  "name" : "title",
+  "name" : "briefDescription",
   "paramType" : {
     "exportId" : "Text",
     "name" : "Text"
   },
-  "question" : "Briefly describe the safety issue",
+  "question" : "Briefly describe the issue",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
+  "exportId" : "yHl0bApIRDGz-AUV46kc8w",
+  "name" : "location",
+  "paramType" : {
+    "exportId" : "un1P2zxETp2Gi6p6DxbD0A",
+    "name" : "Location"
+  },
+  "question" : "Where did you see this?",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 } ]
