@@ -22,5 +22,5 @@ Truck dock
 Outside trailer area
 Laramie - Office Warehouse
 Laramie - Mezzanine
-`));
+`, true));
 }
