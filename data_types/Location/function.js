@@ -20,5 +20,7 @@ New office 1st floor
 New office 2nd floor
 Truck dock
 Outside trailer area
+Laramie - Office Warehouse
+Laramie - Mezzanine
 `));
 }
