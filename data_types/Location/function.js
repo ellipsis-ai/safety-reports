@@ -1,7 +1,7 @@
 function(ellipsis) {
-  const itemsForText = require('data_type_items_for_text');
+  const utils = require('data_type_utils');
 
-ellipsis.success(itemsForText(`
+const sfLocations = `
 Condor 1
 Condor 2
 Condor packaging
@@ -20,7 +20,17 @@ New office 1st floor
 New office 2nd floor
 Truck dock
 Outside trailer area
-Laramie - Office Warehouse
-Laramie - Mezzanine
-`, { shouldSort: true, shouldIncludeOther: true }));
+`;
+
+const laramieLocations = `
+Office
+Warehouse
+Mezzanine
+`;
+
+const sfLabels = utils.labelsFromText(sfLocations).map(ea => `SF - ${ea}`);
+const laramieLabels = utils.labelsFromText(laramieLocations).map(ea => `Laramie - ${ea}`);
+const labels = sfLabels.concat(laramieLabels);
+
+ellipsis.success(utils.itemsFromLabels(labels, { shouldSort: true, shouldIncludeOther: true }));
 }
