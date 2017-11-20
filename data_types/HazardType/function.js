@@ -22,5 +22,5 @@ Fall hazard
 Sharp object hazard in work area
 Evacuation path blocked
 Emergency equipment out of place
-`, true));
+`, { shouldSort: true, shouldIncludeOther: true }));
 }
