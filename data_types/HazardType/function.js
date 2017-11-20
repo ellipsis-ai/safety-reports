@@ -1,7 +1,7 @@
 function(ellipsis) {
-  const itemsForText = require('data_type_items_for_text');
+  const utils = require('data_type_utils');
 
-ellipsis.success(itemsForText(`
+const labels = utils.labelsFromText(`
 No available PPE
 Employee without PPE
 Slip hazard
@@ -22,5 +22,7 @@ Fall hazard
 Sharp object hazard in work area
 Evacuation path blocked
 Emergency equipment out of place
-`, { shouldSort: true, shouldIncludeOther: true }));
+`);
+
+ellipsis.success(utils.itemsFromLabels(labels, { shouldSort: true, shouldIncludeOther: true }));
 }
