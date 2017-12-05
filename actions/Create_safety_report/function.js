@@ -15,7 +15,7 @@ uploadFile().then(ref => {
   createTask(ref).then(taskId => {
     const taskUrl = `${teamworkApiBaseUrl}/#tasks/${taskId}`
     ellipsis.success({
-      stillUnsafe: stillUnsafe ? "Yes" : "No",
+      stillUnsafe: stillUnsafe.label,
       concernLevel: concernLevel.label,
       taskUrl: taskUrl,
       teamworkUrl: teamworkApiBaseUrl,
@@ -78,7 +78,7 @@ function additionalDetailsText() {
 function description() {
   const submittedText =  `**Submitted by:**\t${slackRealname} (@${slackUsername})`;
   const locationText = `**Location:**\t${location.label}`;
-  const stillUnsafeText = `**Still unsafe?:**\t${stillUnsafe ? "Yes" : "No"}`;
+  const stillUnsafeText = `**Still unsafe?:**\t${stillUnsafe.label}`;
   const concernLevelText = `**Level of concern:**\t${concernLevel.label}`;
   return `${submittedText}\n\n${locationText}\n\n${stillUnsafeText}\n\n${concernLevelText}\n\n${additionalDetailsText()}`
 }

@@ -2,8 +2,8 @@
   "exportId" : "5dRZu7QDQxOQbK62xOWlfQ",
   "name" : "stillUnsafe",
   "paramType" : {
-    "exportId" : "Yes/No",
-    "name" : "Yes/No"
+    "exportId" : "vCrAVbLmTP-c6rIiJC6Cgw",
+    "name" : "YesNoChoice"
   },
   "question" : "Is the situation still unsafe?",
   "isSavedForTeam" : false,

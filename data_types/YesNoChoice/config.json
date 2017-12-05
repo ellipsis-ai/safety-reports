@@ -1,0 +1,10 @@
+{
+  "exportId" : "vCrAVbLmTP-c6rIiJC6Cgw",
+  "name" : "YesNoChoice",
+  "forcePrivateResponse" : false,
+  "isDataType" : true,
+  "dataTypeConfig" : {
+    "fields" : [ ],
+    "usesCode" : true
+  }
+}
