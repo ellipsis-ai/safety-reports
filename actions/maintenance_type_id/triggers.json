@@ -1,0 +1,6 @@
+[ {
+  "text" : "maintenance type id",
+  "requiresMention" : true,
+  "isRegex" : false,
+  "caseSensitive" : false
+} ]
