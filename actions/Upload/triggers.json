@@ -1,0 +1,6 @@
+[ {
+  "text" : "fiix upload",
+  "requiresMention" : true,
+  "isRegex" : false,
+  "caseSensitive" : false
+} ]

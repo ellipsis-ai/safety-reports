@@ -11,20 +11,20 @@ const slackUsername = ellipsis.userInfo.messageInfo.details.name;
 const slackRealname = ellipsis.userInfo.messageInfo.details.profile.realName;
 const stillUnsafeText = stillUnsafe ? "Yes" : "No";
 
-//uploadFile().then(fileId => {
 workOrders.create(description(), location, slackRealname).then(workOrderId => {
-  ellipsis.success({
-    stillUnsafe: stillUnsafeText,
-    concernLevel: concernLevel.label,
-    workOrderUrl: workOrderUrl,
-    fiixUrl: fiixUrl,
-    hazardType: hazardType.label,
-    location: location.label,
-    filename: filename || "no image file included",
-    followUpUserId: followUpUserId
+  uploadFile(workOrderId).then(fileId => {
+    ellipsis.success({
+      stillUnsafe: stillUnsafeText,
+      concernLevel: concernLevel.label,
+      workOrderUrl: workOrderUrl,
+      fiixUrl: fiixUrl,
+      hazardType: hazardType.label,
+      location: location.label,
+      filename: filename || "no image file included",
+      followUpUserId: followUpUserId
+    });
   });
 }).catch(err => ellipsis.error(JSON.stringify(err)));
-//});
 
 function additionalDetailsText() {
   if (details.trim().toLowerCase() === "none") {
@@ -40,15 +40,13 @@ function description() {
   return `${title}\n\nStill unsafe?:\t${stillUnsafeText}\n\n${concernLevelText}\n\n${additionalDetailsText()}`
 }
 
-function uploadFile() {
+function uploadFile(workOrderId) {
   return new Promise((resolve, reject) => {
     if (file) {
       file.fetch().then(res => {
         filename = res.filename;
-        files.uploadContents(filename, res.value, res.contentType).then(contentsId => {
-          files.add(filename, contentsId).then(fileId => {
-            resolve(fileId);
-          });
+        files.create(filename, res.value, res.contentType, workOrderId).then(fileId => {
+          resolve(fileId);
         });
       });
     } else {

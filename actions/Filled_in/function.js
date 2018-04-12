@@ -8,7 +8,7 @@ function(ellipsis) {
 //       { name: "location", value: "5559777" },
       { name: "stillUnsafe", value: "no" },
       { name: "concernLevel", value: "3" },
-      { name: "file", value: "none" },
+//      { name: "file", value: "none" },
       { name: "details", value: "none" }
     ]
   }

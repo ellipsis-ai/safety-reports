@@ -59,16 +59,6 @@
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
-  "exportId" : "Ksd3f50kQ62kYfKQzCU3Tw",
-  "name" : "site",
-  "paramType" : {
-    "exportId" : "AShgge0ARmucoEK01MRehA",
-    "name" : "Site"
-  },
-  "question" : "What is the value for `site`?",
-  "isSavedForTeam" : false,
-  "isSavedForUser" : false
-}, {
   "exportId" : "PQhnN2K9Q2G_xfR7Gch06Q",
   "name" : "details",
   "paramType" : {
@@ -136,6 +126,16 @@
     "name" : "HazardType"
   },
   "question" : "What is the value for `hazardType`?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
+  "exportId" : "n21aZvW4RTSkd8vBwLnloA",
+  "name" : "file",
+  "paramType" : {
+    "exportId" : "File",
+    "name" : "File"
+  },
+  "question" : "File?",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
