@@ -8,6 +8,6 @@
 **Image file:** {successResult.filename}
 **Additional details:** {details}
 
-If you have a {successResult.fiixUrl} login, you can view the report at: {successResult.workOrderUrl}
+If you have a [Fiix]({successResult.fiixUrl}) account, you can view the report at: {successResult.workOrderUrl}
 
 You can follow up on this by contacting <@{successResult.followUpUserId}>

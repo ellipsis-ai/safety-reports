@@ -5,13 +5,13 @@ let filename;
 
 const subdomain = ellipsis.env.FIIX_SUBDOMAIN;
 const fiixUrl = `https://${subdomain}.macmms.com/`;
-const workOrderUrl = fiixUrl;
 const followUpUserId = ellipsis.env.SAFETY_REPORT_FOLLOW_UP_USER_ID;
 const slackUsername = ellipsis.userInfo.messageInfo.details.name;
 const slackRealname = ellipsis.userInfo.messageInfo.details.profile.realName;
 const stillUnsafeText = stillUnsafe ? "Yes" : "No";
 
 workOrders.create(description(), location, slackRealname).then(workOrderId => {
+  const workOrderUrl = `${fiixUrl}?wo=${workOrderId}`;
   uploadFile(workOrderId).then(fileId => {
     ellipsis.success({
       stillUnsafe: stillUnsafeText,
@@ -43,11 +43,8 @@ function description() {
 function uploadFile(workOrderId) {
   return new Promise((resolve, reject) => {
     if (file) {
-      file.fetch().then(res => {
-        filename = res.filename;
-        files.create(filename, res.value, res.contentType, workOrderId).then(fileId => {
-          resolve(fileId);
-        });
+      files.create(file, workOrderId).then(fileId => {
+        resolve(fileId);
       });
     } else {
       resolve(null); 
