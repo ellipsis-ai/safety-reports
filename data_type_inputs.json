@@ -1,11 +1,11 @@
 [ {
   "exportId" : "LopPPLzuT36WdNrXs59VuA",
-  "name" : "searchQuery",
+  "name" : "site",
   "paramType" : {
-    "exportId" : "Text",
-    "name" : "Text"
+    "exportId" : "AShgge0ARmucoEK01MRehA",
+    "name" : "Site"
   },
-  "question" : "What is the value for `searchQuery`?",
+  "question" : "At which site?",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 } ]

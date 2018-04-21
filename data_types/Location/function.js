@@ -1,9 +1,9 @@
-function(searchQuery, ellipsis) {
+function(site, ellipsis) {
   const locations = require('locations')(ellipsis);
 const groupBy = require('group-by');
 const sortBy = require('sort-by');
 
-locations.fetchLocationsForSiteNamed(searchQuery).then(objects => {
+locations.fetchLocations(site).then(objects => {
   ellipsis.success(objects.map(ea => {
     return {
       label: ea.strName,

@@ -1,21 +1,11 @@
 [ {
-  "exportId" : "3IcTbjxRQr-HiUup_Um4jw",
-  "name" : "workOrderId",
-  "paramType" : {
-    "exportId" : "Text",
-    "name" : "Text"
-  },
-  "question" : "What is the value for `workOrderId`?",
-  "isSavedForTeam" : false,
-  "isSavedForUser" : false
-}, {
   "exportId" : "4_KddBXYTuKbl5z6H_Z7rQ",
-  "name" : "site",
+  "name" : "location",
   "paramType" : {
-    "exportId" : "AShgge0ARmucoEK01MRehA",
-    "name" : "Site"
+    "exportId" : "un1P2zxETp2Gi6p6DxbD0A",
+    "name" : "Location"
   },
-  "question" : "On which site did you see this?",
+  "question" : "Where did you see this?",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
@@ -59,6 +49,26 @@
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
+  "exportId" : "E9qDlXL8Qyi-jY7OSaGWJw",
+  "name" : "concernLevel",
+  "paramType" : {
+    "exportId" : "w6FA6MKdTXumxpQXOeUa4w",
+    "name" : "ConcernLevel"
+  },
+  "question" : "How concerned are you about the issue?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
+  "exportId" : "EqGpy5hYSsilEf8u0JzIMA",
+  "name" : "file",
+  "paramType" : {
+    "exportId" : "File",
+    "name" : "File"
+  },
+  "question" : "Paste an image or upload a file that shows the problem",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
   "exportId" : "HzcqfhGISQmq2KkN88K3_Q",
   "name" : "file",
   "paramType" : {
@@ -66,6 +76,16 @@
     "name" : "File"
   },
   "question" : "Paste an image or upload a file that shows the problem",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
+  "exportId" : "NH5AE9TdTP-B5GSD5yOXVQ",
+  "name" : "details",
+  "paramType" : {
+    "exportId" : "Text",
+    "name" : "Text"
+  },
+  "question" : "Add any additional details you'd like to include, or type \"none\"",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
@@ -129,6 +149,16 @@
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
+  "exportId" : "dJ3rjV2gSxG7Grjj3PgzaQ",
+  "name" : "workOrderId",
+  "paramType" : {
+    "exportId" : "Text",
+    "name" : "Text"
+  },
+  "question" : "For which work order ID?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
   "exportId" : "kkp4zuoZTKGG5pk_Vq3EeA",
   "name" : "hazardType",
   "paramType" : {
@@ -166,6 +196,16 @@
     "name" : "Text"
   },
   "question" : "Briefly describe the issue",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
+  "exportId" : "tZZZJ9zxToGGmhHbZixJ6Q",
+  "name" : "stillUnsafe",
+  "paramType" : {
+    "exportId" : "Yes/No",
+    "name" : "Yes/No"
+  },
+  "question" : "Is the situation still unsafe?",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
