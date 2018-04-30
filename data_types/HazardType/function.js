@@ -23,6 +23,8 @@ Sharp object hazard in work area
 Evacuation path blocked
 Emergency equipment out of place
 `);
+const items = utils.itemsFromLabels(labels, { shouldSort: true, shouldIncludeOther: true });
+const itemsWithSafetyKudos = [{ label: "Safety kudos", id: "kudos" }].concat(items);
 
-ellipsis.success(utils.itemsFromLabels(labels, { shouldSort: true, shouldIncludeOther: true }));
+ellipsis.success(itemsWithSafetyKudos);
 }
