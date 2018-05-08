@@ -1,0 +1,10 @@
+{
+  "exportId" : "AShgge0ARmucoEK01MRehA",
+  "name" : "Site",
+  "forcePrivateResponse" : false,
+  "isDataType" : true,
+  "dataTypeConfig" : {
+    "fields" : [ ],
+    "usesCode" : true
+  }
+}
