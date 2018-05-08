@@ -1,7 +1,7 @@
 function(hazardType, briefDescription, location, stillUnsafe, concernLevel, file, details, ellipsis) {
-  const files = require('files')(ellipsis);
+  const boxFiles = require('box-files')(ellipsis);
+const fiixFiles = require('fiix-files')(ellipsis);
 const workOrders = require('work-orders')(ellipsis);
-let filename;
 
 const subdomain = ellipsis.env.FIIX_SUBDOMAIN;
 const fiixUrl = `https://${subdomain}.macmms.com/`;
@@ -10,21 +10,32 @@ const slackUsername = ellipsis.userInfo.messageInfo.details.name;
 const slackRealname = ellipsis.userInfo.messageInfo.details.profile.realName;
 const stillUnsafeText = stillUnsafe ? "Yes" : "No";
 
-workOrders.create(description(), location, slackRealname).then(workOrderId => {
-  const workOrderUrl = `${fiixUrl}?wo=${workOrderId}`;
-  uploadFile(workOrderId).then(fileId => {
-    ellipsis.success({
-      stillUnsafe: stillUnsafeText,
-      concernLevel: concernLevel.label,
-      workOrderUrl: workOrderUrl,
-      fiixUrl: fiixUrl,
-      hazardType: hazardType.label,
-      location: location.label,
-      filename: filename || "no image file included",
-      followUpUserId: followUpUserId
+uploadFile().then(fileInfo => {
+  workOrders.create(description(), location, slackRealname).then(workOrderId => {
+    createLink(fileInfo, workOrderId).then(() => {
+      const workOrderUrl = `${fiixUrl}?wo=${workOrderId}`;
+      const picture = fileInfo ? `[${fileInfo.filename}](${fileInfo.url})` : "<no image provided>";
+      ellipsis.success({
+        stillUnsafe: stillUnsafeText,
+        concernLevel: concernLevel.label,
+        workOrderUrl: workOrderUrl,
+        fiixUrl: fiixUrl,
+        hazardType: hazardType.label,
+        location: location.label,
+        picture: picture,
+        followUpUserId: followUpUserId
+      });
     });
   });
-}).catch(err => ellipsis.error(JSON.stringify(err)));
+});
+
+function createLink(fileInfo, workOrderId) {
+  if (fileInfo) {
+    return fiixFiles.createLink(fileInfo.filename, fileInfo.url, workOrderId);
+  } else {
+    return Promise.resolve(null);
+  }
+}
 
 function additionalDetailsText() {
   if (details.trim().toLowerCase() === "none") {
@@ -40,11 +51,13 @@ function description() {
   return `${title}\n\nStill unsafe?:\t${stillUnsafeText}\n\n${concernLevelText}\n\n${additionalDetailsText()}`
 }
 
-function uploadFile(workOrderId) {
+function uploadFile() {
   return new Promise((resolve, reject) => {
     if (file) {
-      files.create(file, workOrderId).then(fileId => {
-        resolve(fileId);
+      file.fetch().then(res => {
+        boxFiles.uploadWithTimestamp(res.filename, res.contentType, res.value).then(url => {
+          resolve({ url: url, filename: res.filename });
+        })
       });
     } else {
       resolve(null); 

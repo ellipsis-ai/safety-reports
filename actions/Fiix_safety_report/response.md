@@ -5,7 +5,7 @@
 **Location:** {successResult.location}
 **Still unsafe?:** {successResult.stillUnsafe}
 **Level of concern:** {successResult.concernLevel}
-**Image file:** {successResult.filename}
+**Image file:** {successResult.picture}
 **Additional details:** {details}
 
 If you have a [Fiix]({successResult.fiixUrl}) account, you can view the report at: {successResult.workOrderUrl}
