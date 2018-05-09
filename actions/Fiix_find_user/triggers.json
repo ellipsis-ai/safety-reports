@@ -1,0 +1,6 @@
+[ {
+  "text" : "fiix user {userId}",
+  "requiresMention" : true,
+  "isRegex" : false,
+  "caseSensitive" : false
+} ]

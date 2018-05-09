@@ -119,6 +119,16 @@
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
+  "exportId" : "ijULX9nbTVS5uBcI4ymvwQ",
+  "name" : "userId",
+  "paramType" : {
+    "exportId" : "Text",
+    "name" : "Text"
+  },
+  "question" : "What is the value for `userId`?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
   "exportId" : "nRdLTJtUThaLPwLtgIplng",
   "name" : "file",
   "paramType" : {
