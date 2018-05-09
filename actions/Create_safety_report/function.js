@@ -1,5 +1,5 @@
 function(hazardType, briefDescription, location, stillUnsafe, concernLevel, file, details, ellipsis) {
-  const boxFiles = require('box-files')(ellipsis);
+  const box = require('ellipsis-box');
 const fiixFiles = require('fiix-files')(ellipsis);
 const workOrders = require('fiix-work-orders')(ellipsis);
 
@@ -55,7 +55,7 @@ function uploadFile() {
   return new Promise((resolve, reject) => {
     if (file) {
       file.fetch().then(res => {
-        boxFiles.uploadWithTimestamp(res.filename, res.contentType, res.value).then(url => {
+        box.files(ellipsis).uploadWithTimestamp(res.filename, res.contentType, res.value).then(url => {
           resolve({ url: url, filename: res.filename });
         })
       });
