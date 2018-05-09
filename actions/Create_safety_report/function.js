@@ -11,7 +11,7 @@ const slackRealname = ellipsis.userInfo.messageInfo.details.profile.realName;
 const stillUnsafeText = stillUnsafe ? "Yes" : "No";
 
 uploadFile().then(fileInfo => {
-  workOrders.create(description(), location, slackRealname).then(workOrderId => {
+  workOrders.create(description(), location).then(workOrderId => {
     createLink(fileInfo, workOrderId).then(() => {
       const workOrderUrl = `${fiixUrl}?wo=${workOrderId}`;
       const picture = fileInfo ? `[${fileInfo.filename}](${fileInfo.url})` : "<no image provided>";
