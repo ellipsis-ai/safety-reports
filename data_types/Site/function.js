@@ -1,5 +1,5 @@
 function(ellipsis) {
-  const locations = require('locations')(ellipsis);
+  const locations = require('fiix-locations')(ellipsis);
 
 locations.fetchSites().then(sites => {
   ellipsis.success(sites.map(ea => {

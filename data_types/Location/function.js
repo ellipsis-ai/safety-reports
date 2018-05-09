@@ -1,7 +1,5 @@
 function(site, ellipsis) {
-  const locations = require('locations')(ellipsis);
-const groupBy = require('group-by');
-const sortBy = require('sort-by');
+  const locations = require('fiix-locations')(ellipsis);
 
 locations.fetchLocations(site).then(objects => {
   ellipsis.success(objects.map(ea => {

@@ -1,7 +1,7 @@
 function(hazardType, briefDescription, location, stillUnsafe, concernLevel, file, details, ellipsis) {
   const boxFiles = require('box-files')(ellipsis);
 const fiixFiles = require('fiix-files')(ellipsis);
-const workOrders = require('work-orders')(ellipsis);
+const workOrders = require('fiix-work-orders')(ellipsis);
 
 const subdomain = ellipsis.env.FIIX_SUBDOMAIN;
 const fiixUrl = `https://${subdomain}.macmms.com/`;
