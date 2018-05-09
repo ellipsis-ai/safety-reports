@@ -1,5 +1,20 @@
 [ {
-  "text" : "fiix safety",
+  "text" : "create safety report",
+  "requiresMention" : true,
+  "isRegex" : false,
+  "caseSensitive" : false
+}, {
+  "text" : "near miss",
+  "requiresMention" : true,
+  "isRegex" : false,
+  "caseSensitive" : false
+}, {
+  "text" : "near-miss",
+  "requiresMention" : true,
+  "isRegex" : false,
+  "caseSensitive" : false
+}, {
+  "text" : "safety",
   "requiresMention" : true,
   "isRegex" : false,
   "caseSensitive" : false
