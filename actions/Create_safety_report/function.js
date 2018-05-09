@@ -41,7 +41,7 @@ function additionalDetailsText() {
   if (details.trim().toLowerCase() === "none") {
     return "";
   } else {
-    return `**Additional details:**\t${details}`;
+    return `Additional details:\t${details}`;
   }
 }
 
