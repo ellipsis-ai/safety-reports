@@ -54,9 +54,9 @@ function description() {
 function uploadFile() {
   return new Promise((resolve, reject) => {
     if (file) {
-      file.fetch().then(res => {
-        box.files(ellipsis).uploadWithTimestamp(res.filename, res.contentType, res.value).then(url => {
-          resolve({ url: url, filename: res.filename });
+      file.fetch().then(fetchResult => {
+        box.files(ellipsis).uploadWithTimestamp(fetchResult.filename, fetchResult.contentType, fetchResult.value).then(uploadResult => {
+          resolve({ url: uploadResult.url, filename: fetchResult.filename });
         })
       });
     } else {
