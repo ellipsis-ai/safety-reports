@@ -28,9 +28,22 @@ Warehouse
 Mezzanine
 `;
 
+const seattleLocations = `
+Office
+Receiving 1
+Receiving 2
+Packaging line
+Wash line
+Cold storage
+Grow (DGS)
+Grow (ZIP)
+Sanitation
+`;
+
 const sfLabels = utils.labelsFromText(sfLocations).map(ea => `SF - ${ea}`);
 const laramieLabels = utils.labelsFromText(laramieLocations).map(ea => `Laramie - ${ea}`);
-const labels = sfLabels.concat(laramieLabels);
+const seattleLabels = utils.labelsFromText(seattleLocations).map(ea => `Seattle – ${ea}`);
+const labels = sfLabels.concat(laramieLabels).concat(seattleLabels);
 
 ellipsis.success(utils.itemsFromLabels(labels, { shouldSort: true, shouldIncludeOther: true }));
 }

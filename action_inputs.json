@@ -15,7 +15,7 @@
     "exportId" : "w6FA6MKdTXumxpQXOeUa4w",
     "name" : "ConcernLevel"
   },
-  "question" : "How concerned are you about the issue?",
+  "question" : "How concerned are/were you about the issue?",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
@@ -25,7 +25,7 @@
     "exportId" : "File",
     "name" : "File"
   },
-  "question" : "Paste an image or upload a file that shows the problem",
+  "question" : "Paste an image or upload a file that shows the problem or the person receiving kudos.",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
@@ -45,7 +45,7 @@
     "exportId" : "42CuJUqkQhC1xaTNDffe6w",
     "name" : "HazardType"
   },
-  "question" : "What type of hazard is it?",
+  "question" : "What type of issue is it? (Hazard, Near Miss, Kudos)",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
@@ -55,7 +55,7 @@
     "exportId" : "Text",
     "name" : "Text"
   },
-  "question" : "Briefly describe the issue",
+  "question" : "Briefly describe the hazard, near miss, or kudos.",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
@@ -65,7 +65,7 @@
     "exportId" : "un1P2zxETp2Gi6p6DxbD0A",
     "name" : "Location"
   },
-  "question" : "Where did you see this?",
+  "question" : "Where did you see this occur?",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 } ]
