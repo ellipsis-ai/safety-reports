@@ -1,5 +1,5 @@
 function(workOrderId, ellipsis) {
-  const workOrders = require('fiix-work-orders')(ellipsis);
+  const workOrders = require('ellipsis-fiix').workOrders(ellipsis);
 
 workOrders.findWorkOrder(workOrderId).then(res => {
   if (res[0]) {

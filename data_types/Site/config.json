@@ -2,7 +2,9 @@
   "exportId" : "AShgge0ARmucoEK01MRehA",
   "name" : "Site",
   "forcePrivateResponse" : false,
+  "canBeMemoized" : false,
   "isDataType" : true,
+  "isTest" : false,
   "dataTypeConfig" : {
     "fields" : [ ],
     "usesCode" : true

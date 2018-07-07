@@ -2,7 +2,9 @@
   "exportId" : "42CuJUqkQhC1xaTNDffe6w",
   "name" : "HazardType",
   "forcePrivateResponse" : false,
+  "canBeMemoized" : false,
   "isDataType" : true,
+  "isTest" : false,
   "dataTypeConfig" : {
     "fields" : [ ],
     "usesCode" : true

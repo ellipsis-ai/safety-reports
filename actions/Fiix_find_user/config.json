@@ -2,5 +2,7 @@
   "exportId" : "oOomlCXPSyW5ZqEZpDQtxw",
   "name" : "Fiix find user",
   "forcePrivateResponse" : false,
-  "isDataType" : false
+  "canBeMemoized" : false,
+  "isDataType" : false,
+  "isTest" : false
 }
