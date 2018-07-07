@@ -2,7 +2,9 @@
   "exportId" : "un1P2zxETp2Gi6p6DxbD0A",
   "name" : "Location",
   "forcePrivateResponse" : false,
+  "canBeMemoized" : false,
   "isDataType" : true,
+  "isTest" : false,
   "dataTypeConfig" : {
     "fields" : [ ],
     "usesCode" : true
