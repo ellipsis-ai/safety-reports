@@ -1,9 +1,29 @@
 [ {
+  "exportId" : "4_KddBXYTuKbl5z6H_Z7rQ",
+  "name" : "location",
+  "paramType" : {
+    "exportId" : "un1P2zxETp2Gi6p6DxbD0A",
+    "name" : "Location"
+  },
+  "question" : "Where did you see this?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
+  "exportId" : "5PJ3AxhdRk2aQ-idojF3IQ",
+  "name" : "briefDescription",
+  "paramType" : {
+    "exportId" : "Text",
+    "name" : "Text"
+  },
+  "question" : "Briefly describe the issue",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
   "exportId" : "5dRZu7QDQxOQbK62xOWlfQ",
   "name" : "stillUnsafe",
   "paramType" : {
-    "exportId" : "vCrAVbLmTP-c6rIiJC6Cgw",
-    "name" : "YesNoChoice"
+    "exportId" : "Text",
+    "name" : "Text"
   },
   "question" : "Is the situation still unsafe?",
   "isSavedForTeam" : false,
@@ -15,7 +35,27 @@
     "exportId" : "w6FA6MKdTXumxpQXOeUa4w",
     "name" : "ConcernLevel"
   },
-  "question" : "How concerned are/were you about the issue?",
+  "question" : "How concerned are you about the issue?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
+  "exportId" : "E9qDlXL8Qyi-jY7OSaGWJw",
+  "name" : "concernLevel",
+  "paramType" : {
+    "exportId" : "w6FA6MKdTXumxpQXOeUa4w",
+    "name" : "ConcernLevel"
+  },
+  "question" : "How concerned are you about the issue?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
+  "exportId" : "EqGpy5hYSsilEf8u0JzIMA",
+  "name" : "file",
+  "paramType" : {
+    "exportId" : "File",
+    "name" : "File"
+  },
+  "question" : "Paste an image or upload a file that shows the problem",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
@@ -25,7 +65,17 @@
     "exportId" : "File",
     "name" : "File"
   },
-  "question" : "Paste an image or upload a file that shows the problem or the person receiving kudos.",
+  "question" : "Paste an image or upload a file that shows the problem",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
+  "exportId" : "NH5AE9TdTP-B5GSD5yOXVQ",
+  "name" : "details",
+  "paramType" : {
+    "exportId" : "Text",
+    "name" : "Text"
+  },
+  "question" : "Add any additional details you'd like to include, or type \"none\"",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
@@ -45,7 +95,7 @@
     "exportId" : "42CuJUqkQhC1xaTNDffe6w",
     "name" : "HazardType"
   },
-  "question" : "What type of issue is it? (Hazard, Near Miss, Kudos)",
+  "question" : "What type of hazard is it?",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
@@ -55,7 +105,57 @@
     "exportId" : "Text",
     "name" : "Text"
   },
-  "question" : "Briefly describe the hazard, near miss, or kudos.",
+  "question" : "Briefly describe the issue",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
+  "exportId" : "dJ3rjV2gSxG7Grjj3PgzaQ",
+  "name" : "workOrderId",
+  "paramType" : {
+    "exportId" : "Text",
+    "name" : "Text"
+  },
+  "question" : "For which work order ID?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
+  "exportId" : "ijULX9nbTVS5uBcI4ymvwQ",
+  "name" : "userId",
+  "paramType" : {
+    "exportId" : "Text",
+    "name" : "Text"
+  },
+  "question" : "What is the value for `userId`?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
+  "exportId" : "nRdLTJtUThaLPwLtgIplng",
+  "name" : "file",
+  "paramType" : {
+    "exportId" : "File",
+    "name" : "File"
+  },
+  "question" : "File?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
+  "exportId" : "tZZZJ9zxToGGmhHbZixJ6Q",
+  "name" : "stillUnsafe",
+  "paramType" : {
+    "exportId" : "Yes/No",
+    "name" : "Yes/No"
+  },
+  "question" : "Is the situation still unsafe?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
+  "exportId" : "wTrGBEsdQc6hgCCSB4360A",
+  "name" : "hazardType",
+  "paramType" : {
+    "exportId" : "42CuJUqkQhC1xaTNDffe6w",
+    "name" : "HazardType"
+  },
+  "question" : "What type of hazard is it?",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
@@ -65,7 +165,7 @@
     "exportId" : "un1P2zxETp2Gi6p6DxbD0A",
     "name" : "Location"
   },
-  "question" : "Where did you see this occur?",
+  "question" : "Where did you see this?",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 } ]

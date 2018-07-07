@@ -5,9 +5,9 @@
 **Location:** {successResult.location}
 **Still unsafe?:** {successResult.stillUnsafe}
 **Level of concern:** {successResult.concernLevel}
-**Image file:** {successResult.filename}
+**Image file:** {successResult.picture}
 **Additional details:** {details}
 
-If you have a {successResult.teamworkUrl} login, you can view the report at: {successResult.taskUrl}
+If you have a [Fiix]({successResult.fiixUrl}) account, you can view the report at: {successResult.workOrderUrl}
 
 You can follow up on this by contacting <@{successResult.followUpUserId}>
