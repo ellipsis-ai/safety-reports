@@ -2,7 +2,9 @@ function(hazardType, briefDescription, location, stillUnsafe, concernLevel, file
   const box = require('ellipsis-box');
 const fiixFiles = require('ellipsis-fiix').files(ellipsis);
 const workOrders = require('ellipsis-fiix').workOrders(ellipsis);
-
+const EllipsisApi = require('ellipsis-api');
+const actionsApi = new EllipsisApi(ellipsis);
+const inspect = require('util').inspect;
 const subdomain = ellipsis.env.FIIX_SUBDOMAIN;
 const fiixUrl = `https://${subdomain}.macmms.com/`;
 const followUpUserId = ellipsis.env.SAFETY_REPORT_FOLLOW_UP_USER_ID;
@@ -15,7 +17,7 @@ uploadFile().then(fileInfo => {
     createLink(fileInfo, workOrderId).then(() => {
       const workOrderUrl = `${fiixUrl}?wo=${workOrderId}`;
       const picture = fileInfo ? `[${fileInfo.filename}](${fileInfo.url})` : "<no image provided>";
-      ellipsis.success({
+      const resultText = formatOutput({
         stillUnsafe: stillUnsafeText,
         concernLevel: concernLevel.label,
         workOrderUrl: workOrderUrl,
@@ -24,6 +26,16 @@ uploadFile().then(fileInfo => {
         location: location.label,
         picture: picture,
         followUpUserId: followUpUserId
+      });
+      actionsApi.say({
+        channel: ellipsis.env.SAFETY_REPORT_UPDATE_CHANNEL_ID,
+        message: resultText
+      }).then(() => {
+        ellipsis.success(resultText);
+      }).catch((err) => {
+        console.log("An error occurred trying to announce the new safety report to the safety-updates channel:");
+        console.log(inspect(err));
+        ellipsis.success(resultText);
       });
     });
   });
@@ -63,5 +75,22 @@ function uploadFile() {
       resolve(null); 
     }
   });
+}
+
+function formatOutput(successResult) {
+  return `# A new safety report has been created with the following information:
+
+**Reported by:** <@${ellipsis.userInfo.messageInfo.userId}>
+**Hazard type:** ${successResult.hazardType}
+**Brief description:** ${briefDescription}
+**Location:** ${successResult.location}
+**Still unsafe?:** ${successResult.stillUnsafe}
+**Level of concern:** ${successResult.concernLevel}
+**Image file:** ${successResult.picture}
+**Additional details:** ${details}
+
+If you have a [Fiix](${successResult.fiixUrl}) account, you can view the report at: ${successResult.workOrderUrl}
+
+You can follow up on this by contacting <@${successResult.followUpUserId}>`;
 }
 }
