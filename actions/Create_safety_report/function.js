@@ -7,7 +7,7 @@ const followUpUserId = ellipsis.env.SAFETY_REPORT_FOLLOW_UP_USER_ID;
 const messageInfoDetails = ellipsis.userInfo.messageInfo.details;
 const stillUnsafeText = stillUnsafe ? "Yes" : "No";
 
-workRequests.create(description(), location, file).then(res => {
+workRequests.create(description(), location, { file: file }).then(res => {
   const workOrderUrl = `${workRequests.fiixUrl}?wo=${res.workOrderId}`;
   const picture = res.fileInfo ? `[${res.fileInfo.filename}](${res.fileInfo.url})` : "<no image provided>";
   const resultText = formatOutput({

@@ -19,23 +19,33 @@
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
-  "exportId" : "5dRZu7QDQxOQbK62xOWlfQ",
-  "name" : "stillUnsafe",
+  "exportId" : "74w_pwi1Sj-hr3f2cZ1weQ",
+  "name" : "description",
   "paramType" : {
     "exportId" : "Text",
     "name" : "Text"
   },
-  "question" : "Is the situation still unsafe?",
+  "question" : "What are you requesting? Provide a full description.",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
-  "exportId" : "CDORsWs6RiKnDUM2B070BQ",
-  "name" : "concernLevel",
+  "exportId" : "7RE1_GqdSSGK8UPAJSPgpA",
+  "name" : "desiredCompletion",
   "paramType" : {
-    "exportId" : "w6FA6MKdTXumxpQXOeUa4w",
-    "name" : "ConcernLevel"
+    "exportId" : "Date & Time",
+    "name" : "Date & Time"
   },
-  "question" : "How concerned are you about the issue?",
+  "question" : "By when would you like this to be completed?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
+  "exportId" : "C_X0ab3UQvu1FtcNXqAJcA",
+  "name" : "location",
+  "paramType" : {
+    "exportId" : "un1P2zxETp2Gi6p6DxbD0A",
+    "name" : "Location"
+  },
+  "question" : "Which location (site/area) is this request associated with?",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
@@ -59,16 +69,6 @@
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
-  "exportId" : "HzcqfhGISQmq2KkN88K3_Q",
-  "name" : "file",
-  "paramType" : {
-    "exportId" : "File",
-    "name" : "File"
-  },
-  "question" : "Paste an image or upload a file that shows the problem",
-  "isSavedForTeam" : false,
-  "isSavedForUser" : false
-}, {
   "exportId" : "NH5AE9TdTP-B5GSD5yOXVQ",
   "name" : "details",
   "paramType" : {
@@ -79,33 +79,23 @@
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
-  "exportId" : "PQhnN2K9Q2G_xfR7Gch06Q",
-  "name" : "details",
+  "exportId" : "POGjGINhTX6rJyiD4z31rw",
+  "name" : "notes",
   "paramType" : {
     "exportId" : "Text",
     "name" : "Text"
   },
-  "question" : "Add any additional details you'd like to include, or type \"none\"",
+  "question" : "Any other special notes? (or type 'none')",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
-  "exportId" : "SuweJeGPSgS7bkXhIrD4-w",
-  "name" : "hazardType",
-  "paramType" : {
-    "exportId" : "42CuJUqkQhC1xaTNDffe6w",
-    "name" : "HazardType"
-  },
-  "question" : "What type of hazard is it?",
-  "isSavedForTeam" : false,
-  "isSavedForUser" : false
-}, {
-  "exportId" : "Z0lCjwjITSmrRtRGJCa5kw",
-  "name" : "briefDescription",
+  "exportId" : "QE8taVcuQSC8N9qQ2q0Xvw",
+  "name" : "department",
   "paramType" : {
     "exportId" : "Text",
     "name" : "Text"
   },
-  "question" : "Briefly describe the issue",
+  "question" : "What department of the company is this request associated with?",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
@@ -156,16 +146,6 @@
     "name" : "HazardType"
   },
   "question" : "What type of hazard is it?",
-  "isSavedForTeam" : false,
-  "isSavedForUser" : false
-}, {
-  "exportId" : "yHl0bApIRDGz-AUV46kc8w",
-  "name" : "location",
-  "paramType" : {
-    "exportId" : "un1P2zxETp2Gi6p6DxbD0A",
-    "name" : "Location"
-  },
-  "question" : "Where did you see this?",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 } ]
