@@ -7,7 +7,8 @@ locations.fetchLocations(site).then(objects => {
     return {
       label: ea.strName,
       id: ea.id,
-      siteId: ea.intSiteID.toString()
+      siteId: ea.intSiteID.toString(),
+      fullName: `${site.label} – ${ea.strName}`
     };
   });
   const sorted = orderBy(processed, 'label');
