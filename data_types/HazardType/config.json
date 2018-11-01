@@ -1,7 +1,7 @@
 {
   "exportId" : "42CuJUqkQhC1xaTNDffe6w",
   "name" : "HazardType",
-  "forcePrivateResponse" : false,
+  "responseTypeId" : "Normal",
   "canBeMemoized" : false,
   "isDataType" : true,
   "isTest" : false,
