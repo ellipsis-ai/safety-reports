@@ -1,7 +1,7 @@
 {
   "exportId" : "ee6f9L9OTnuydLaG_lgNyA",
   "name" : "Filled in",
-  "forcePrivateResponse" : false,
+  "responseTypeId" : "Normal",
   "canBeMemoized" : false,
   "isDataType" : false,
   "isTest" : false

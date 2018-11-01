@@ -1,7 +1,7 @@
 {
   "exportId" : "AShgge0ARmucoEK01MRehA",
   "name" : "Site",
-  "forcePrivateResponse" : false,
+  "responseTypeId" : "Normal",
   "canBeMemoized" : false,
   "isDataType" : true,
   "isTest" : false,

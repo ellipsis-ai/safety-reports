@@ -3,6 +3,6 @@
   "exportId" : "kHn5Sx3OTICH0ZW-cHlYlA",
   "icon" : "⚠️",
   "requiredAWSConfigs" : [ ],
-  "requiredOAuth2ApiConfigs" : [ ],
+  "requiredOAuthApiConfigs" : [ ],
   "requiredSimpleTokenApis" : [ ]
 }

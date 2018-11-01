@@ -2,5 +2,6 @@
   "text" : "box upload",
   "requiresMention" : true,
   "isRegex" : false,
-  "caseSensitive" : false
+  "caseSensitive" : false,
+  "triggerType" : "MessageSent"
 } ]
