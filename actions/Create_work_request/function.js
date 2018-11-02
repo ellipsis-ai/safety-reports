@@ -9,7 +9,14 @@ const messageInfoDetails = ellipsis.userInfo.messageInfo.details;
 
 const requestText = `${department}: ${description}\n\n${notesText()}`
 const formattedCompletion = moment(desiredCompletion).tz(ellipsis.teamInfo.timeZone).format('dddd, D MMMM YYYY');
-workRequests.create(requestText, location, { suggestedCompletionDate: desiredCompletion }).then(res => {
+
+const createOptions = {
+  maintenanceTypeName: "Upgrade/New Install",
+  description: requestText,
+  location: location,
+  suggestedCompletionDate: desiredCompletion
+};
+workRequests.create(createOptions).then(res => {
   const workOrderUrl = `${workRequests.fiixUrl}?wo=${res.workOrderId}`;
   const resultText = formatOutput({
     workOrderUrl: workOrderUrl,
