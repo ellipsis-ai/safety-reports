@@ -1,17 +1,5 @@
 function(site, ellipsis) {
-  const locations = require('ellipsis-fiix').locations(ellipsis);
-const orderBy = require('natural-orderby').orderBy;
+  const locations = require('locations')(ellipsis);
 
-locations.fetchLocations(site).then(objects => {
-  const processed = objects.map(ea => {
-    return {
-      label: ea.strName,
-      id: ea.id,
-      siteId: ea.intSiteID.toString(),
-      fullName: `${site.label} – ${ea.strName}`
-    };
-  });
-  const sorted = orderBy(processed, 'label');
-  ellipsis.success(sorted);
-}).catch(err => ellipsis.error(JSON.stringify(err)));
+locations.locationsForSite(site).then(ellipsis.success).catch(err => ellipsis.error(JSON.stringify(err)));
 }
