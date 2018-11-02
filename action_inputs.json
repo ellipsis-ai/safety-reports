@@ -42,10 +42,10 @@
   "exportId" : "C_X0ab3UQvu1FtcNXqAJcA",
   "name" : "location",
   "paramType" : {
-    "exportId" : "un1P2zxETp2Gi6p6DxbD0A",
-    "name" : "Location"
+    "exportId" : "nBJ9Ph0FQ9q_tRhzfzCINw",
+    "name" : "SSFLocation"
   },
-  "question" : "Which location (site/area) is this request associated with?",
+  "question" : "Which location is this request associated with?",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {

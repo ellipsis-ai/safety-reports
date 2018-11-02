@@ -1,23 +1,11 @@
 [ {
-  "text" : "create work request",
+  "text" : "create ssf work request",
   "requiresMention" : true,
   "isRegex" : false,
   "caseSensitive" : false,
   "triggerType" : "MessageSent"
 }, {
-  "text" : "fiix create",
-  "requiresMention" : true,
-  "isRegex" : false,
-  "caseSensitive" : false,
-  "triggerType" : "MessageSent"
-}, {
-  "text" : "fiix new",
-  "requiresMention" : true,
-  "isRegex" : false,
-  "caseSensitive" : false,
-  "triggerType" : "MessageSent"
-}, {
-  "text" : "new work request",
+  "text" : "new ssf work request",
   "requiresMention" : true,
   "isRegex" : false,
   "caseSensitive" : false,
