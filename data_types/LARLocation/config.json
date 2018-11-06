@@ -1,0 +1,12 @@
+{
+  "exportId" : "vdhbyVP4Qum76ZELpep98A",
+  "name" : "LARLocation",
+  "responseTypeId" : "Normal",
+  "canBeMemoized" : false,
+  "isDataType" : true,
+  "isTest" : false,
+  "dataTypeConfig" : {
+    "fields" : [ ],
+    "usesCode" : true
+  }
+}
