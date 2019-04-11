@@ -35,7 +35,7 @@
     "exportId" : "Text",
     "name" : "Text"
   },
-  "question" : "What are you requesting? Provide a full description.",
+  "question" : "What are you requesting? Provide a full description. (Be sure to include who, what, when, why, where, why and how.)",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
