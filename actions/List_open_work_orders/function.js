@@ -1,5 +1,5 @@
 function(ellipsis) {
-  const workOrders = ellipsis.require('ellipsis-fiix@beta').workOrders(ellipsis);
+  const workOrders = ellipsis.require('ellipsis-fiix@^0.1.0').workOrders(ellipsis);
 
 function workOrderTitle(wo, index) {
   return `${index + 1}. Work order ${wo.strCode}`;

@@ -1,5 +1,5 @@
 function(ellipsis) {
-  const locations = ellipsis.require('ellipsis-fiix@beta').locations(ellipsis);
+  const locations = ellipsis.require('ellipsis-fiix@^0.1.0').locations(ellipsis);
 
 const excluded = ["(No Site)", "Asset Graveyard"];
 locations.fetchSites().then(sites => {
