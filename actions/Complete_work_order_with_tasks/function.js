@@ -1,11 +1,14 @@
-function(workOrderId, ellipsis) {
+function(workOrderId, notifyChannel, ellipsis) {
   const ellipsisFiix = ellipsis.require('ellipsis-fiix@^0.1.0');
+const moment = require('moment-timezone');
 const workOrders = ellipsisFiix.workOrders(ellipsis);
 
 workOrders.getCompletedStatusId().then((completedID) => {
   workOrders.find(workOrderId).then((wo) => {
     if (!wo || wo.intWorkOrderStatusID === completedID) {
-      ellipsis.success("This work order was already marked complete.")
+      const dateCompleted = wo.dtmDateCompleted ? 
+        moment(wo.dtmDateCompleted).tz(ellipsis.team.timeZone).format(" [on] M/D/YYYY [at] h:mm A") : "";
+      ellipsis.success(`Work order ${wo.strCode} was already marked complete${dateCompleted}.`)
     } else {
       return beginWorkOrderCompletion(wo);
     }
@@ -46,6 +49,9 @@ ${firstTaskDescription}
         }, {
           name: "remainingTaskData",
           value: JSON.stringify(tasks.slice(1))
+        }, {
+          name: "notifyChannel",
+          value: notifyChannel
         }]
       }
     });

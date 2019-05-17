@@ -109,6 +109,16 @@
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
+  "exportId" : "HR0sNkB2TXiZ2R-g19wfNA",
+  "name" : "notifyChannel",
+  "paramType" : {
+    "exportId" : "Text",
+    "name" : "Text"
+  },
+  "question" : "What is the value for `notifyChannel`?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
   "exportId" : "NH5AE9TdTP-B5GSD5yOXVQ",
   "name" : "details",
   "paramType" : {
@@ -149,13 +159,13 @@
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
-  "exportId" : "dJ3rjV2gSxG7Grjj3PgzaQ",
-  "name" : "workOrderId",
+  "exportId" : "UNeoc-WqRlauPertkMkftA",
+  "name" : "notifyChannel",
   "paramType" : {
     "exportId" : "Text",
     "name" : "Text"
   },
-  "question" : "For which work order ID?",
+  "question" : "What is the value for `notifyChannel`?",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
@@ -179,36 +189,6 @@
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
-  "exportId" : "ijULX9nbTVS5uBcI4ymvwQ",
-  "name" : "userId",
-  "paramType" : {
-    "exportId" : "Text",
-    "name" : "Text"
-  },
-  "question" : "What is the value for `userId`?",
-  "isSavedForTeam" : false,
-  "isSavedForUser" : false
-}, {
-  "exportId" : "jAwel-6wRLOeSiW-KU-EZw",
-  "name" : "hours",
-  "paramType" : {
-    "exportId" : "Number",
-    "name" : "Number"
-  },
-  "question" : "How many hours did this take to complete?",
-  "isSavedForTeam" : false,
-  "isSavedForUser" : false
-}, {
-  "exportId" : "nRdLTJtUThaLPwLtgIplng",
-  "name" : "file",
-  "paramType" : {
-    "exportId" : "File",
-    "name" : "File"
-  },
-  "question" : "File?",
-  "isSavedForTeam" : false,
-  "isSavedForUser" : false
-}, {
   "exportId" : "tZZZJ9zxToGGmhHbZixJ6Q",
   "name" : "stillUnsafe",
   "paramType" : {
@@ -216,16 +196,6 @@
     "name" : "Yes/No"
   },
   "question" : "Is the situation still unsafe?",
-  "isSavedForTeam" : false,
-  "isSavedForUser" : false
-}, {
-  "exportId" : "uS1T-YMtSSWLsiWH-Ljd5w",
-  "name" : "workOrderId",
-  "paramType" : {
-    "exportId" : "Text",
-    "name" : "Text"
-  },
-  "question" : "What is the value for `workOrderId`?",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
