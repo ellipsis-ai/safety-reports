@@ -1,5 +1,5 @@
 function(userId, ellipsis) {
-  const client = require('ellipsis-fiix').sdk(ellipsis);
+  const client = ellipsis.require('ellipsis-fiix@^0.1.0-beta').sdk(ellipsis);
 const util = require('util');
 
 client.find({
