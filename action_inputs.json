@@ -49,6 +49,26 @@
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
+  "exportId" : "B0_NNyVyQpi7BO-0fcmOXA",
+  "name" : "taskId",
+  "paramType" : {
+    "exportId" : "Text",
+    "name" : "Text"
+  },
+  "question" : "What is the value for `taskId`?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
+  "exportId" : "B6eQCOrRRKa1yGgJUPXfcg",
+  "name" : "remainingTaskData",
+  "paramType" : {
+    "exportId" : "Text",
+    "name" : "Text"
+  },
+  "question" : "What is the value for `remainingTaskData`?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
   "exportId" : "C_X0ab3UQvu1FtcNXqAJcA",
   "name" : "location",
   "paramType" : {
@@ -76,6 +96,16 @@
     "name" : "File"
   },
   "question" : "Paste an image or upload a file that shows the problem",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
+  "exportId" : "G7oHkcuuSDSLMNAeZSiF5A",
+  "name" : "hours",
+  "paramType" : {
+    "exportId" : "Number",
+    "name" : "Number"
+  },
+  "question" : "How many hours did this task take to complete?",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
@@ -109,6 +139,16 @@
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
+  "exportId" : "UDflLKJdTSWGm--UFVS65w",
+  "name" : "taskNumber",
+  "paramType" : {
+    "exportId" : "Text",
+    "name" : "Text"
+  },
+  "question" : "What is the value for `taskNumber`?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
   "exportId" : "dJ3rjV2gSxG7Grjj3PgzaQ",
   "name" : "workOrderId",
   "paramType" : {
@@ -129,6 +169,16 @@
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
+  "exportId" : "ff5SK_-XQPmqEFA-pv1Gvg",
+  "name" : "workOrderId",
+  "paramType" : {
+    "exportId" : "Text",
+    "name" : "Text"
+  },
+  "question" : "What is the value for `workOrderId`?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
   "exportId" : "ijULX9nbTVS5uBcI4ymvwQ",
   "name" : "userId",
   "paramType" : {
@@ -136,6 +186,16 @@
     "name" : "Text"
   },
   "question" : "What is the value for `userId`?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
+  "exportId" : "jAwel-6wRLOeSiW-KU-EZw",
+  "name" : "hours",
+  "paramType" : {
+    "exportId" : "Number",
+    "name" : "Number"
+  },
+  "question" : "How many hours did this take to complete?",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
@@ -156,6 +216,16 @@
     "name" : "Yes/No"
   },
   "question" : "Is the situation still unsafe?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
+  "exportId" : "uS1T-YMtSSWLsiWH-Ljd5w",
+  "name" : "workOrderId",
+  "paramType" : {
+    "exportId" : "Text",
+    "name" : "Text"
+  },
+  "question" : "What is the value for `workOrderId`?",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
