@@ -1,9 +1,9 @@
 function(taskId, taskNumber, remainingTaskData, hours, ellipsis) {
   const remainingTasks = JSON.parse(remainingTaskData);
-const ellipsisFiix = ellipsis.require('ellipsis-fiix@^0.1.0-beta');
+const ellipsisFiix = ellipsis.require('ellipsis-fiix@beta');
 const workOrders = ellipsisFiix.workOrders(ellipsis);
 const users = ellipsisFiix.users(ellipsis);
-
+ 
 users.userIdForEmail(ellipsis.event.user.email).then((userId) => {
   return workOrders.completeTask(taskId, userId, hours).then((updatedTask) => {
     if (remainingTasks.length > 0) {

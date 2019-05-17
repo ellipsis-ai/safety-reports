@@ -1,5 +1,5 @@
 function(workOrderId, ellipsis) {
-  const ellipsisFiix = ellipsis.require('ellipsis-fiix@^0.1.0-beta');
+  const ellipsisFiix = ellipsis.require('ellipsis-fiix@beta');
 const workOrders = ellipsisFiix.workOrders(ellipsis);
 
 workOrders.getCompletedStatusId().then((completedID) => {
