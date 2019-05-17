@@ -1,9 +1,11 @@
-function(taskId, taskNumber, remainingTaskData, hours, ellipsis) {
+function(taskId, taskNumber, remainingTaskData, notifyChannel, hours, ellipsis) {
   const remainingTasks = JSON.parse(remainingTaskData);
 const ellipsisFiix = ellipsis.require('ellipsis-fiix@^0.1.0');
 const workOrders = ellipsisFiix.workOrders(ellipsis);
 const users = ellipsisFiix.users(ellipsis);
- 
+const EllipsisApi = require('ellipsis-api');
+const actionsApi = new EllipsisApi(ellipsis);
+
 users.userIdForEmail(ellipsis.event.user.email).then((userId) => {
   return workOrders.completeTask(taskId, userId, hours).then((updatedTask) => {
     if (remainingTasks.length > 0) {
@@ -45,8 +47,25 @@ ${nextTaskSummary}`;
   });
 }
 
+function getChannelId() {
+  return ellipsis.event.message && ellipsis.event.message.channel && ellipsis.event.message.channel.id;
+}
+
 function workOrderCompleted(workOrder) {
   const intro = `OK, work order ${workOrder.strCode} is now marked complete.`;
-  ellipsis.success(intro);
+  announceCompletion(workOrder).then(() => ellipsis.success(intro));
+}
+
+function announceCompletion(workOrder) {
+  if (notifyChannel !== "none" && notifyChannel !== getChannelId()) {
+    return actionsApi.say({
+      message: `✅ Work order ${workOrder.strCode} has been marked complete by ${ellipsis.event.user.formattedLink}.`,
+      channel: notifyChannel
+    }).catch(() => {
+      console.log(`Unable to announce work order completion to channel ID ${notifyChannel}`);
+    });
+  } else {
+    return Promise.resolve(null);
+  }
 }
 }

@@ -1,5 +1,6 @@
 function(ellipsis) {
-  const workOrders = ellipsis.require('ellipsis-fiix@^0.1.0').workOrders(ellipsis);
+  const greeting = require('ellipsis-random-response').greetingForTimeZone(ellipsis.team.timeZone);
+const workOrders = ellipsis.require('ellipsis-fiix@^0.1.0').workOrders(ellipsis);
 
 function workOrderTitle(wo, index) {
   return `${index + 1}. Work order ${wo.strCode}`;
@@ -7,7 +8,10 @@ function workOrderTitle(wo, index) {
 
 workOrders.getOpen().then((workOrders) => {
   if (workOrders.length === 0) {
-    ellipsis.success("There are no open work orders at this moment. 🎉");
+    ellipsis.success(`
+${greeting}
+
+There are no open work orders at this moment. 🎉`);
     return;
   }
   const workOrderSummary = workOrders.map((wo, index) => {
@@ -30,6 +34,8 @@ ${description}${taskSummary}
   const intro = workOrders.length === 1 ? "There is one open work order." :
     `There are ${workOrders.length} open work orders.`;
   const result = `
+${greeting}
+
 ${intro}
 
 ${workOrderSummary}
@@ -44,6 +50,9 @@ ${workOrderSummary}
         args: [{
           name: "workOrderId",
           value: String(wo.id)
+        }, {
+          name: "notifyChannel",
+          value: getChannelId() || "none"
         }],
         allowOthers: true,
         allowMultipleSelections: true
@@ -51,4 +60,8 @@ ${workOrderSummary}
     })
   });
 });
+
+function getChannelId() {
+  return ellipsis.event.message && ellipsis.event.message.channel && ellipsis.event.message.channel.id;
+}
 }
