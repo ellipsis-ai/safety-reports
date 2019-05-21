@@ -49,23 +49,13 @@
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
-  "exportId" : "B0_NNyVyQpi7BO-0fcmOXA",
-  "name" : "taskId",
+  "exportId" : "7V4wIB8ZRheBgfQCDcvhqQ",
+  "name" : "file",
   "paramType" : {
-    "exportId" : "Text",
-    "name" : "Text"
+    "exportId" : "File",
+    "name" : "File"
   },
-  "question" : "What is the value for `taskId`?",
-  "isSavedForTeam" : false,
-  "isSavedForUser" : false
-}, {
-  "exportId" : "B6eQCOrRRKa1yGgJUPXfcg",
-  "name" : "remainingTaskData",
-  "paramType" : {
-    "exportId" : "Text",
-    "name" : "Text"
-  },
-  "question" : "What is the value for `remainingTaskData`?",
+  "question" : "If relevant, paste an image or upload any file you want to include.",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
@@ -99,26 +89,6 @@
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
-  "exportId" : "G7oHkcuuSDSLMNAeZSiF5A",
-  "name" : "hours",
-  "paramType" : {
-    "exportId" : "Number",
-    "name" : "Number"
-  },
-  "question" : "How many hours did this task take to complete?",
-  "isSavedForTeam" : false,
-  "isSavedForUser" : false
-}, {
-  "exportId" : "HR0sNkB2TXiZ2R-g19wfNA",
-  "name" : "notifyChannel",
-  "paramType" : {
-    "exportId" : "Text",
-    "name" : "Text"
-  },
-  "question" : "What is the value for `notifyChannel`?",
-  "isSavedForTeam" : false,
-  "isSavedForUser" : false
-}, {
   "exportId" : "NH5AE9TdTP-B5GSD5yOXVQ",
   "name" : "details",
   "paramType" : {
@@ -149,23 +119,13 @@
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
-  "exportId" : "UDflLKJdTSWGm--UFVS65w",
-  "name" : "taskNumber",
+  "exportId" : "b1Jk-aE4QzuF7wZBrKqH3Q",
+  "name" : "file",
   "paramType" : {
-    "exportId" : "Text",
-    "name" : "Text"
+    "exportId" : "File",
+    "name" : "File"
   },
-  "question" : "What is the value for `taskNumber`?",
-  "isSavedForTeam" : false,
-  "isSavedForUser" : false
-}, {
-  "exportId" : "UNeoc-WqRlauPertkMkftA",
-  "name" : "notifyChannel",
-  "paramType" : {
-    "exportId" : "Text",
-    "name" : "Text"
-  },
-  "question" : "What is the value for `notifyChannel`?",
+  "question" : "If relevant, paste an image or upload any file you want to include.",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
@@ -176,16 +136,6 @@
     "name" : "LARLocation"
   },
   "question" : "Which location is this request associated with?",
-  "isSavedForTeam" : false,
-  "isSavedForUser" : false
-}, {
-  "exportId" : "ff5SK_-XQPmqEFA-pv1Gvg",
-  "name" : "workOrderId",
-  "paramType" : {
-    "exportId" : "Text",
-    "name" : "Text"
-  },
-  "question" : "What is the value for `workOrderId`?",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 }, {
@@ -206,6 +156,16 @@
     "name" : "HazardType"
   },
   "question" : "What type of hazard is it?",
+  "isSavedForTeam" : false,
+  "isSavedForUser" : false
+}, {
+  "exportId" : "x5Z20JMxQm-p1m_OUcv4Fg",
+  "name" : "file",
+  "paramType" : {
+    "exportId" : "File",
+    "name" : "File"
+  },
+  "question" : "If relevant, paste an image or upload any file you want to include.",
   "isSavedForTeam" : false,
   "isSavedForUser" : false
 } ]
